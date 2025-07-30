@@ -16,9 +16,10 @@ resource "local_file" "private_key" {
 }
 
 resource "aws_key_pair" "jenkins_key" {
-  key_name   = "jenkins"
+  key_name   = "jenkins-new-key"  # <-- change this line
   public_key = tls_private_key.jenkins.public_key_openssh
 }
+
 
 # Security group to allow SSH, HTTP, HTTPS, and Jenkins port
 resource "aws_security_group" "jenkins_sg" {
