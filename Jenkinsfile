@@ -1,10 +1,7 @@
 pipeline {
     agent any
 
-    tools {
-        maven 'MyMaven'  // Make sure this matches exactly the name in Jenkins config
-    }
-
+    
     environment {
         IMAGE_NAME = "sanketmedhepawar/jenkins-docker-maven"
     }
