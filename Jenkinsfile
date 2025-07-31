@@ -2,13 +2,13 @@ pipeline {
     agent any
 
     environment {
-        IMAGE_NAME = "atuljkamble/jenkins-docker-maven"
+        IMAGE_NAME = "SanketMedhePawar/jenkins-docker-maven"
     }
 
     stages {
         stage('Checkout') {
             steps {
-                git branch: 'main', url: 'https://github.com/atulkamble/jenkins-docker-maven-project.git'
+                git branch: 'main', url: ''
             }
         }
 
